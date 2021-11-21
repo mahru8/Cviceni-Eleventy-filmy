@@ -1,1 +1,14 @@
+---
+layout: zakladni
+---
+
 <h1>Zkouška úvodní stránky</h1>
+
+<ul>
+
+	{% for film in filmy %}
+		<li>{{ film.nazev }}</li>
+    <a href="/film/{{ film.nazev | slug }}">{{ film.nazev }}</a>
+       	{% endfor %}
+</ul>
+
